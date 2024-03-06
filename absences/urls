@@ -1,0 +1,8 @@
+#urls
+from django.urls import path
+from .views import liste_etudiants,liste_cours,enregistrer_Absences
+urlpatterns = [
+    path('etudiant/',liste_etudiants,name='liste_etudiants'),
+    path('cours/',liste_cours,name='liste_cours'),
+    path('enregistrer_Absences/<int:etudiant_id>/<int:cours_id>/',enregistrer_Absences,name='liste_Absences'),
+]
